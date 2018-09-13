@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function validateAccount(str){
+			let regExp = /^[_a-z0-9]{6,}$/;
+			if(regExp.test(str)){
+				return true;
+			}else{
+				return false;
+			}
+		}
+		while(true){
+			let input = prompt("Nhập account");
+			if(input=="exit"){
+				break;
+			}
+			if(validateAccount(input)){
+				alert("account hợp lệ");
+			}else{
+				alert("account không hợp lệ");
+			}
+		}
+
+	</script>
+</body>
+</html>
